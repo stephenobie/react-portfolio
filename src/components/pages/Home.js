@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const bgImage = require('../assets/img/portfolio-bg.jpg');
+
 const styles = {
   card: {
     margin: 20,
