@@ -1,23 +1,31 @@
 
 import React from 'react';
 
-
-
-
-
-
-
-
-
-
-
+const bgImage = require('../assets/img/portfolio-bg.jpg');
+const styles = {
+  card: {
+    margin: 20,
+    background: '#e8eaf6',
+  },
+  heading: {
+    background: '#9a74db',
+    minHeight: 50,
+    lineHeight: 3.5,
+    fontSize: '1.2rem',
+    color: 'white',
+    padding: '0 20px',
+  },
+  content: {
+    padding: 20,
+  },
+};
 
 
 export default function Home() {
   return (
-    <div className="background">
-      <h1>Stephen Obie</h1>
-      <p>
+    <div style={styles.card}>
+      <h1 style={styles.heading}>Stephen Obie</h1>
+      <p style={styles.content}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
         velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
         ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
