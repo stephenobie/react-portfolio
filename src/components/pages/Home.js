@@ -1,82 +1,164 @@
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBMask,
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBView,
+  MDBContainer,
+  MDBFormInline,
+  MDBAnimation
+} from "mdbreact";
+import "../styles/Home.css";
 
-import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+class AppPage extends React.Component {
+  state = {
+    collapsed: false
+  };
 
+  handleTogglerClick = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  };
 
-const styles = {
-  card: {
-    margin: 20,
-    background: '#e8eaf6',
-  },
-  heading: {
-    background: '#9a74db',
-    minHeight: 50,
-    lineHeight: 3.5,
-    fontSize: '1.2rem',
-    color: 'white',
-    padding: '0 20px',
-  },
-  content: {
-    padding: 20,
-  },
-};
+  render() {
+    const overlay = (
+      <div
+        id="sidenav-overlay"
+        style={{ backgroundColor: "transparent" }}
+        onClick={this.handleTogglerClick}
+      />
+    );
+    return (
+      <div id="apppage">
+        <Router>
+          <div>
+            <MDBNavbar
+              color="primary-color"
+              dark
+              expand="md"
+              fixed="top"
+              scrolling
+              transparent
+            >
+              <MDBContainer>
+                <MDBNavbarBrand>
+                  <strong className="white-text">MDB</strong>
+                </MDBNavbarBrand>
+                <MDBNavbarToggler onClick={this.handleTogglerClick} />
+                <MDBCollapse isOpen={this.state.collapsed} navbar>
+                  <MDBNavbarNav left>
+                    <MDBNavItem active>
+                      <MDBNavLink to="#!">Home</MDBNavLink>
+                    </MDBNavItem>
+                    <MDBNavItem>
+                      <MDBNavLink to="#!">Link</MDBNavLink>
+                    </MDBNavItem>
+                    <MDBNavItem>
+                      <MDBNavLink to="#!">Profile</MDBNavLink>
+                    </MDBNavItem>
+                  </MDBNavbarNav>
+                  <MDBNavbarNav right>
+                    <MDBNavItem>
+                      <MDBFormInline waves>
+                        <div className="md-form my-0">
+                          <input
+                            className="form-control mr-sm-2"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search"
+                          />
+                        </div>
+                      </MDBFormInline>
+                    </MDBNavItem>
+                  </MDBNavbarNav>
+                </MDBCollapse>
+              </MDBContainer>
+            </MDBNavbar>
+            {this.state.collapsed && overlay}
+          </div>
+        </Router>
+        <MDBView>
+          <MDBMask className="d-flex justify-content-center align-items-center gradient">
+            <MDBContainer>
+              <MDBRow>
+                <MDBCol
+                  md="6"
+                  className="white-text text-center text-md-left mt-xl-5 mb-5"
+                >
+                  <MDBAnimation type="fadeInLeft" delay=".3s">
+                    <h1 className="h1-responsive font-weight-bold mt-sm-5">
+                      Make purchases with our app
+                    </h1>
+                    <hr className="hr-light" />
+                    <h6 className="mb-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Rem repellendus quasi fuga nesciunt dolorum nulla magnam
+                      veniam sapiente, fugiat! Commodi sequi non animi ea dolor
+                      molestiae iste.
+                    </h6>
+                    <MDBBtn color="white">Download</MDBBtn>
+                    <MDBBtn outline color="white">
+                      Learn More
+                    </MDBBtn>
+                  </MDBAnimation>
+                </MDBCol>
 
+                <MDBCol md="6" xl="5" className="mt-xl-5">
+                  <MDBAnimation type="fadeInRight" delay=".3s">
+                    <img
+                      src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </MDBAnimation>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </MDBMask>
+        </MDBView>
 
-export default function Home() {
-  return (
-    <div style={styles.card}>
-      <h1 style={styles.heading}>Stephen Obie</h1>
-
-
-     
-
-
-    <MDBFooter bgColor='primary' className='text-white text-center text-lg-left'>
-      <MDBContainer className='p-4'>
-        <MDBRow>
-          <MDBCol lg='6' md='12' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase'>Footer Content</h5>
-
-          </MDBCol>
-
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase'>Links</h5>
-
-            <ul className='list-unstyled mb-0'>
-              <li>
-                <a href='https://github.com/stephenobie' className='text-white'>
-                  Github
-                </a>
-              </li>
-              <li>
-                <a href='https://www.linkedin.com/in/stephen-obie-a56261107/' className='text-white'>
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href='mailto:sobie31@outlook.com' className='text-white'>
-                  sobie31@outlook.com
-                </a>
-              </li>
-            </ul>
-          </MDBCol>
-
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase mb-0'>Links</h5>
-
-           
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-white' href='https://www.linkedin.com/in/stephen-obie-a56261107/'>
-          Stephen Obie
-        </a>
+        <MDBContainer>
+          <MDBRow className="py-5">
+            <MDBCol md="12" className="text-center">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
       </div>
-    </MDBFooter>
-
-    </div>
-  );
+    );
+  }
 }
+
+export default AppPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

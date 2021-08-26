@@ -1,12 +1,70 @@
-.background {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 35rem;
-    padding: 15rem 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("./assets/img/portfolio-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
+#apppage .gradient {
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    45deg,
+    from(rgba(42, 27, 161, 0.7)),
+    to(rgba(29, 210, 177, 0.7))
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+}
+
+#apppage .view {
+  background-image: url("https://wallpaperbat.com/img/186821-beautiful-nature-wallpaper-free-download-1920x1200-beautiful.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+#apppage h6 {
+  line-height: 1.7;
+}
+
+@media only screen and (max-width: 400px) {
+  #apppage .animated img {
+    max-height: 50vh;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
   }
+}
+@media only screen and (max-width: 767px) {
+  #apppage .animated img {
+    max-height: 35vh;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  #apppage .animated img {
+    max-height: 50vh;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+  }
+}
+@media (max-width: 1000px) and (orientation: landscape) {
+  #apppage .view {
+    min-height: 150vh;
+  }
+}
