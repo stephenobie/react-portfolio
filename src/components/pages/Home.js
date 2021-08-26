@@ -17,7 +17,7 @@ import {
   MDBFormInline,
   MDBAnimation
 } from "mdbreact";
-import "../styles/Home.css";
+import "";
 
 class AppPage extends React.Component {
   state = {
