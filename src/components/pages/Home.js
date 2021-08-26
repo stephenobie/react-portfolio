@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 
 const styles = {
@@ -25,18 +26,57 @@ export default function Home() {
   return (
     <div style={styles.card}>
       <h1 style={styles.heading}>Stephen Obie</h1>
-      <p style={styles.content}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+
+
+     
+
+
+    <MDBFooter bgColor='primary' className='text-white text-center text-lg-left'>
+      <MDBContainer className='p-4'>
+        <MDBRow>
+          <MDBCol lg='6' md='12' className='mb-4 mb-md-0'>
+            <h5 className='text-uppercase'>Footer Content</h5>
+
+          </MDBCol>
+
+          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
+            <h5 className='text-uppercase'>Links</h5>
+
+            <ul className='list-unstyled mb-0'>
+              <li>
+                <a href='https://github.com/stephenobie' className='text-white'>
+                  Github
+                </a>
+              </li>
+              <li>
+                <a href='https://www.linkedin.com/in/stephen-obie-a56261107/' className='text-white'>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href='mailto:sobie31@outlook.com' className='text-white'>
+                  sobie31@outlook.com
+                </a>
+              </li>
+            </ul>
+          </MDBCol>
+
+          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
+            <h5 className='text-uppercase mb-0'>Links</h5>
+
+           
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        &copy; {new Date().getFullYear()} Copyright:{' '}
+        <a className='text-white' href='https://www.linkedin.com/in/stephen-obie-a56261107/'>
+          Stephen Obie
+        </a>
+      </div>
+    </MDBFooter>
+
     </div>
   );
 }
