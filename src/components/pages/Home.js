@@ -3,48 +3,37 @@ import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 
-const styles = {
-  card: {
-    margin: 20,
-    background: '#e8eaf6',
-  },
-  heading: {
-    background: '#9a74db',
-    minHeight: 50,
-    lineHeight: 3.5,
-    fontSize: '1.2rem',
-    color: 'white',
-    padding: '0 20px',
-  },
-  content: {
-    padding: 20,
-  },
-};
-
-
 export default function Home() {
   return (
-    <div style={styles.card}>
-      <h1 style={styles.heading}>Stephen Obie</h1>
+<>
+    <header>
+      <div
+        className='p-5 text-center bg-image'
+        style={{ backgroundImage: "url('https://wallpaperaccess.com/full/1356106.jpg')", height:  800}}
+      >
+        <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+          <div className='d-flex justify-content-center align-items-center h-100'>
+            <div className='text-white'>
+              <h1 className='mb-3'>Stephen Obie</h1>
+              <h4 className='mb-3'>Web Developer</h4>
+              <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
+                Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-
-     
-
-
-    <MDBFooter bgColor='primary' className='text-white text-center text-lg-left'>
+    <MDBFooter bgColor='dark' className='text-white, text-center,  fixed-bottom'>
       <MDBContainer className='p-4'>
         <MDBRow>
-          <MDBCol lg='6' md='12' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase'>Footer Content</h5>
-
-          </MDBCol>
-
+       
           <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase'>Links</h5>
-
-            <ul className='list-unstyled mb-0'>
+          
+            <ul className='list-unstyled mb-0, text-center'>
               <li>
-                <a href='https://github.com/stephenobie' className='text-white'>
+                <a href='https://github.com/stephenobie' className='text-white, text-center'>
                   Github
                 </a>
               </li>
@@ -61,11 +50,6 @@ export default function Home() {
             </ul>
           </MDBCol>
 
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase mb-0'>Links</h5>
-
-           
-          </MDBCol>
         </MDBRow>
       </MDBContainer>
 
@@ -76,7 +60,6 @@ export default function Home() {
         </a>
       </div>
     </MDBFooter>
-
-    </div>
-  );
-}
+</>
+  )
+};
