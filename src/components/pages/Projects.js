@@ -17,7 +17,7 @@ export default function App() {
             content is a little bit longer.
           </MDBCardText>
           <MDBCardText>
-            <small className='text-muted'>Last updated 3 mins ago</small>
+            <small className='text-muted'>2021</small>
           </MDBCardText>
         </MDBCardBody>
       </MDBCard>
@@ -30,7 +30,7 @@ export default function App() {
             This is a wider card with supporting text below as a natural lead-in to additional content.
           </MDBCardText>
           <MDBCardText>
-            <small className='text-muted'>Last updated 3 mins ago</small>
+            <small className='text-muted'>2021</small>
           </MDBCardText>
         </MDBCardBody>
       </MDBCard>
@@ -44,7 +44,7 @@ export default function App() {
             card has even longer content than the first to show that equal height action.
           </MDBCardText>
           <MDBCardText>
-            <small className='text-muted'>Last updated 3 mins ago</small>
+            <small className='text-muted'>2021</small>
           </MDBCardText>
         </MDBCardBody>
       </MDBCard>

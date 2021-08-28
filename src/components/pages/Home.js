@@ -16,7 +16,7 @@ export default function Home() {
             <div className='text-white'>
               <h1 className='mb-3'>Stephen Obie</h1>
               <h4 className='mb-3'>Web Developer</h4>
-              <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
+              <a className='btn btn-outline-light btn-lg' href='file:///C:/Users/Sobie/OneDrive/Desktop/Resume%201.pdf' role='button'>
                 Resume
               </a>
             </div>
