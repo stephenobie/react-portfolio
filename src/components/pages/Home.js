@@ -8,7 +8,7 @@ export default function Home() {
 <>
     <header>
       <div
-        className='p-5 text-center bg-image'
+        className='text-center bg-image'
         style={{ backgroundImage: "url('https://wallpaperaccess.com/full/1356106.jpg')", height:  800}}
       >
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
@@ -29,9 +29,9 @@ export default function Home() {
       <MDBContainer className='p-4'>
         <MDBRow>
        
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
+          <MDBCol>
           
-            <ul className='list-unstyled mb-0, text-center'>
+            <ul className='mb-12, text-center'>
               <li>
                 <a href='https://github.com/stephenobie' className='text-white, text-center'>
                   Github
@@ -53,11 +53,11 @@ export default function Home() {
         </MDBRow>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className='text-center' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-white' href='https://www.linkedin.com/in/stephen-obie-a56261107/'>
-          Stephen Obie
-        </a>
+        <p className='text-white'>
+        © 2021 Stephen Obie
+        </p>
       </div>
     </MDBFooter>
 </>
