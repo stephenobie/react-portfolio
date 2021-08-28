@@ -1,13 +1,13 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-// import Screenshot from '../styles/assets/images/'
+import resume from '../images/resume.png'
 
 export default function Resume() {
   return (
     <>
-    <div>
-     
-    </div>
+    
+     <img className= 'fluid' src={resume} alt="resume.pdf"/>
+    
 
 
 <MDBFooter bgColor='dark' className='text-white, text-center,  fixed-bottom'>
