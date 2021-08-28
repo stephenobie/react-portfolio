@@ -8,7 +8,7 @@ export default function Home() {
 <>
     <header>
       <div
-        className='text-center bg-image'
+        className='bg-image text-center'
         style={{ backgroundImage: "url('https://wallpaperaccess.com/full/1356106.jpg')", height:  800}}
       >
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>

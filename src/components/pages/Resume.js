@@ -6,7 +6,7 @@ export default function Resume() {
   return (
     <>
     
-     <img className= 'fluid' src={resume} alt="resume.pdf"/>
+     <img className= 'bg-image' src={resume} alt="resume.pdf"/>
     
 
 

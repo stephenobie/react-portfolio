@@ -1,25 +1,34 @@
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdb-react-ui-kit';
 
 export default function Contact() {
   return (
     <>
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
+  
+<MDBContainer>
+  <MDBRow>
+    <MDBCol md="6">
+      <form>
+        <p className="h5 text-center mb-4">Send me a message!</p>
+        <div className="grey-text">
+          <MDBInput label="Your name" icon="user" group type="text" validate error="wrong"
+            success="right" />
+          <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"
+            success="right" />
+          <MDBInput label="Subject" icon="tag" group type="text" validate error="wrong" success="right" />
+          <MDBInput type="textarea" rows="2" label="Your message" icon="pencil-alt" />
+        </div>
+        <div className="text-center">
+          <MDBBtn outline color="secondary">
+            Send
+            <MDBIcon far icon="paper-plane" className="ml-1" />
+          </MDBBtn>
+        </div>
+      </form>
+    </MDBCol>
+  </MDBRow>
+</MDBContainer>
+
 
 <MDBFooter bgColor='dark' className='text-white, text-center,  fixed-bottom'>
 <MDBContainer className='p-4'>
