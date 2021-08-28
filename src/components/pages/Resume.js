@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-// import resume from '../styles/assets/images/'
+// import Screenshot from '../styles/assets/images/'
 
 export default function Resume() {
   return (
